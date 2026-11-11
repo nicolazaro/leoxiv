@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>León XIV en Sudamérica — Cronología del viaje apostólico (6–17 nov 2026)</title>
+  <meta name="description" content="Línea de tiempo y mapa del Viaje Apostólico de León XIV a Uruguay, Argentina y Perú, del 6 al 17 de noviembre de 2026.">
+  <meta property="og:title" content="León XIV en Sudamérica">
+  <meta property="og:description" content="Cronología y mapa del viaje a Uruguay, Argentina y Perú (6–17 nov 2026).">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✝️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="layout">
+    <main class="col-text">
+      <header class="hero">
+        <p class="kicker">Viaje Apostólico a Uruguay, Argentina y Perú</p>
+        <h1>León XIV en Sudamérica</h1>
+        <p class="dek">Doce días, diez ciudades, tres países. Del 6 al 17 de noviembre de 2026, acto por acto, según el programa oficial de la Santa Sede.</p>
+
+        <ol class="rosario" id="rosario" aria-label="Días del viaje"></ol>
+
+        <ul class="lemas" id="lemas"></ul>
+      </header>
+
+      <section class="controles" aria-label="Filtros">
+        <div class="chips" id="chips-pais" role="group" aria-label="Filtrar por país"></div>
+        <div class="fila">
+          <label class="sel">
+            <span>Tipo de acto</span>
+            <select id="sel-tipo"><option value="">Todos</option></select>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="chk-traslados"> Ocultar traslados
+          </label>
+          <label class="check">
+            <input type="checkbox" id="chk-mihora"> Ver en mi hora
+          </label>
+        </div>
+        <p class="estado" id="estado" aria-live="polite"></p>
+      </section>
+
+      <div id="cronologia" class="cronologia"></div>
+
+      <footer class="pie">
+        <h2>Fuentes</h2>
+        <ul id="fuentes"></ul>
+        <p>Los horarios son locales salvo que actives «Ver en mi hora». Las ubicaciones marcadas como aproximadas no fueron verificadas en el terreno. El programa puede cambiar durante el viaje: este sitio reproduce el anunciado y se actualiza a mano.</p>
+        <p id="actualizado"></p>
+      </footer>
+    </main>
+
+    <aside class="col-mapa" aria-label="Mapa del recorrido">
+      <div id="mapa"></div>
+      <div class="mapa-botones">
+        <button type="button" id="btn-sudamerica">Sudamérica</button>
+        <button type="button" id="btn-todo">Recorrido completo</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="data/itinerario.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
